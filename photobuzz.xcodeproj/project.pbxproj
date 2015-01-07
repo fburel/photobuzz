@@ -15,6 +15,9 @@
 		0CD1C2931A5D7DC300416EED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CD1C2921A5D7DC300416EED /* Images.xcassets */; };
 		0CD1C2961A5D7DC300416EED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD1C2941A5D7DC300416EED /* LaunchScreen.xib */; };
 		0CD1C2A21A5D7DC300416EED /* photobuzzTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD1C2A11A5D7DC300416EED /* photobuzzTests.m */; };
+		0CD1C2AD1A5D7E3F00416EED /* FBImageCaroussel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD1C2AB1A5D7E3F00416EED /* FBImageCaroussel.m */; };
+		0CD1C2B01A5D830500416EED /* CarousselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD1C2AF1A5D830500416EED /* CarousselViewController.m */; };
+		0CD1C2B31A5D868F00416EED /* PictureRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD1C2B21A5D868F00416EED /* PictureRepository.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,12 @@
 		0CD1C29B1A5D7DC300416EED /* photobuzzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = photobuzzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CD1C2A01A5D7DC300416EED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CD1C2A11A5D7DC300416EED /* photobuzzTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = photobuzzTests.m; sourceTree = "<group>"; };
+		0CD1C2AB1A5D7E3F00416EED /* FBImageCaroussel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBImageCaroussel.m; sourceTree = "<group>"; };
+		0CD1C2AC1A5D7E3F00416EED /* FBImageCaroussel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBImageCaroussel.h; sourceTree = "<group>"; };
+		0CD1C2AE1A5D830500416EED /* CarousselViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CarousselViewController.h; sourceTree = "<group>"; };
+		0CD1C2AF1A5D830500416EED /* CarousselViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarousselViewController.m; sourceTree = "<group>"; };
+		0CD1C2B11A5D868F00416EED /* PictureRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureRepository.h; sourceTree = "<group>"; };
+		0CD1C2B21A5D868F00416EED /* PictureRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureRepository.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +96,13 @@
 				0CD1C2871A5D7DC300416EED /* AppDelegate.m */,
 				0CD1C28C1A5D7DC300416EED /* ViewController.h */,
 				0CD1C28D1A5D7DC300416EED /* ViewController.m */,
+				0CD1C2AB1A5D7E3F00416EED /* FBImageCaroussel.m */,
+				0CD1C2AC1A5D7E3F00416EED /* FBImageCaroussel.h */,
 				0CD1C28F1A5D7DC300416EED /* Main.storyboard */,
+				0CD1C2AE1A5D830500416EED /* CarousselViewController.h */,
+				0CD1C2AF1A5D830500416EED /* CarousselViewController.m */,
+				0CD1C2B11A5D868F00416EED /* PictureRepository.h */,
+				0CD1C2B21A5D868F00416EED /* PictureRepository.m */,
 				0CD1C2921A5D7DC300416EED /* Images.xcassets */,
 				0CD1C2941A5D7DC300416EED /* LaunchScreen.xib */,
 				0CD1C2891A5D7DC300416EED /* photobuzz.xcdatamodeld */,
@@ -222,9 +237,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CD1C2AD1A5D7E3F00416EED /* FBImageCaroussel.m in Sources */,
 				0CD1C2881A5D7DC300416EED /* AppDelegate.m in Sources */,
 				0CD1C28B1A5D7DC300416EED /* photobuzz.xcdatamodeld in Sources */,
 				0CD1C28E1A5D7DC300416EED /* ViewController.m in Sources */,
+				0CD1C2B31A5D868F00416EED /* PictureRepository.m in Sources */,
+				0CD1C2B01A5D830500416EED /* CarousselViewController.m in Sources */,
 				0CD1C2851A5D7DC300416EED /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

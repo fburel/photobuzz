@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
+#import "PictureRepository.h"
 
 @interface photobuzzTests : XCTestCase
 
@@ -25,16 +26,25 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
-}
+- (void)testPictureFetcher
+{
+    FlickRArea area;
+    area.latitude = 55.7525;
+    area.longitude = 37.623086;
+    area.radius = 10;
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+    PictureRepository * repo = [PictureRepository new];
+
+    NSArray * dl = [repo picturesFromArea:area];
+
+    XCTAssert(dl.count == 300);
+
+    for(id element in dl)
+    {
+        Class PictureClass = NSClassFromString(@"Picture");
+        BOOL classOk = [element isKindOfClass:PictureClass];
+        XCTAssert(classOk);
+    }
 }
 
 @end
