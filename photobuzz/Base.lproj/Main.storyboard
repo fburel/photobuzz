@@ -14,10 +14,10 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAL-ZN-MNB">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAL-ZN-MNB">
                                 <rect key="frame" x="264" y="285" width="73" height="30"/>
                                 <state key="normal" title="Don't click">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -33,6 +33,7 @@
                             <constraint firstAttribute="centerY" secondItem="MAL-ZN-MNB" secondAttribute="centerY" id="tvs-eI-Qdv"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="TPS-Lz-OFH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -48,22 +49,36 @@
                         <viewControllerLayoutGuide type="bottom" id="1tI-ba-QeL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CKC-mL-9DM">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="473-yn-Hvb" customClass="FBImageCaroussel">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="R6Q-cz-qir">
+                                <rect key="frame" x="44" y="282" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Patientez svp... " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fo-W3-jjB">
+                                <rect key="frame" x="89" y="286" width="131" height="30"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="19"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="473-yn-Hvb" customClass="FBImageCaroussel">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="R6Q-cz-qir" firstAttribute="centerY" secondItem="0Fo-W3-jjB" secondAttribute="centerY" id="0uR-Lp-ikA"/>
                             <constraint firstItem="473-yn-Hvb" firstAttribute="top" secondItem="CKC-mL-9DM" secondAttribute="topMargin" id="53E-jd-oKq"/>
+                            <constraint firstAttribute="centerY" secondItem="R6Q-cz-qir" secondAttribute="centerY" id="AS3-JT-mI5"/>
                             <constraint firstItem="473-yn-Hvb" firstAttribute="leading" secondItem="CKC-mL-9DM" secondAttribute="leadingMargin" constant="-16" id="F5D-QH-fHa"/>
+                            <constraint firstItem="0Fo-W3-jjB" firstAttribute="leading" secondItem="R6Q-cz-qir" secondAttribute="trailing" constant="8" id="J1s-aV-jVf"/>
+                            <constraint firstItem="R6Q-cz-qir" firstAttribute="leading" secondItem="CKC-mL-9DM" secondAttribute="leadingMargin" constant="28" id="Jyu-nL-ZXF"/>
                             <constraint firstItem="1tI-ba-QeL" firstAttribute="top" secondItem="473-yn-Hvb" secondAttribute="bottom" id="Tx2-Be-glc"/>
                             <constraint firstAttribute="trailingMargin" secondItem="473-yn-Hvb" secondAttribute="trailing" constant="-16" id="bXP-zR-dgG"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <connections>
                         <outlet property="caroussel" destination="473-yn-Hvb" id="s7f-nZ-Ar0"/>
                     </connections>

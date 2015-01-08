@@ -18,6 +18,8 @@ typedef struct{
 
 @interface PictureRepository : NSObject
 
++ (id) sharedInstance;
+
 /// Download pictures
 - (NSArray *) picturesFromArea:(FlickRArea)area;
 

@@ -34,7 +34,10 @@
         [self addGestureRecognizer:left];
         
         // Affiche la 1ere page
-        [self displayPageAtIndex:0];
+        if([self.dataSource numberOfPages] > 0)
+        {
+            [self displayPageAtIndex:0];
+        }
         
         _isConfigured = YES;
     }

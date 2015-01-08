@@ -34,6 +34,17 @@
 
 @implementation PictureRepository
 
++ (id)sharedInstance
+{
+    static id __SharedInstance = nil;
+    
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        __SharedInstance = [[self alloc] init];
+    });
+    return __SharedInstance;
+}
+
 - (instancetype)init
 {
     self = [super init];
