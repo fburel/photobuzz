@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 #import "PictureRepository.h"
+#import "Picture.h"
 
 @interface photobuzzTests : XCTestCase
 
@@ -47,4 +48,23 @@
     }
 }
 
+//Test cache
+- (void) testCache
+{
+    Picture * p = [Picture new];
+    p.url = @"test";
+    
+    PictureRepository * repo = [PictureRepository new];
+
+    NSData * data = [repo cachedDataForPicture:p];
+    
+    XCTAssert(data == nil);
+    
+    data = [NSData data];
+    
+    [repo registerCacheData:data forPicture:p];
+    
+    XCTAssert([repo cachedDataForPicture:p] == data);
+    
+}
 @end

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class Picture;
+
 typedef struct{
     double longitude;
     double latitude;
@@ -18,5 +20,10 @@ typedef struct{
 
 /// Download pictures
 - (NSArray *) picturesFromArea:(FlickRArea)area;
+
+/// Cache
+- (NSData *) cachedDataForPicture:(Picture *)picture;
+- (void) registerCacheData:(NSData *)data forPicture:(Picture *)picture;
+
 
 @end

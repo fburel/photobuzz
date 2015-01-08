@@ -11,6 +11,11 @@
 
 #define FLICKR_API_KEY      @"edd17c0c4d413be050ffdba18c74c0e1"
 
+@interface PictureRepository ()
+
+@property (strong, nonatomic) NSMutableDictionary * cache;
+
+@end
 
 @implementation Picture (FlickRBuilder)
 
@@ -28,6 +33,16 @@
 
 
 @implementation PictureRepository
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.cache = [NSMutableDictionary new];
+    }
+    return self;
+}
+
 
 - (NSArray *)picturesFromArea:(FlickRArea)area
 {
@@ -64,5 +79,14 @@
     return pictures;
 }
 
+- (void)registerCacheData:(NSData *)data forPicture:(Picture *)picture
+{
+    [self.cache setObject:data forKey:picture.url];
+}
+
+- (NSData *)cachedDataForPicture:(Picture *)picture
+{
+    return self.cache[picture.url];
+}
 @end
 
