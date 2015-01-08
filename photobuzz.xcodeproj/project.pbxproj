@@ -18,6 +18,7 @@
 		0CD1C2AD1A5D7E3F00416EED /* FBImageCaroussel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD1C2AB1A5D7E3F00416EED /* FBImageCaroussel.m */; };
 		0CD1C2B01A5D830500416EED /* CarousselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD1C2AF1A5D830500416EED /* CarousselViewController.m */; };
 		0CD1C2B31A5D868F00416EED /* PictureRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD1C2B21A5D868F00416EED /* PictureRepository.m */; };
+		18C2A2F7788E91AB6AB569D6 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2AE51F92BB8C66D35EA6B /* Picture.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		0CD1C2AF1A5D830500416EED /* CarousselViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarousselViewController.m; sourceTree = "<group>"; };
 		0CD1C2B11A5D868F00416EED /* PictureRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureRepository.h; sourceTree = "<group>"; };
 		0CD1C2B21A5D868F00416EED /* PictureRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureRepository.m; sourceTree = "<group>"; };
+		18C2A8B87ACCD198BAFB19A0 /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
+		18C2AE51F92BB8C66D35EA6B /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +110,8 @@
 				0CD1C2941A5D7DC300416EED /* LaunchScreen.xib */,
 				0CD1C2891A5D7DC300416EED /* photobuzz.xcdatamodeld */,
 				0CD1C2821A5D7DC300416EED /* Supporting Files */,
+				18C2AE51F92BB8C66D35EA6B /* Picture.m */,
+				18C2A8B87ACCD198BAFB19A0 /* Picture.h */,
 			);
 			path = photobuzz;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 				0CD1C2B31A5D868F00416EED /* PictureRepository.m in Sources */,
 				0CD1C2B01A5D830500416EED /* CarousselViewController.m in Sources */,
 				0CD1C2851A5D7DC300416EED /* main.m in Sources */,
+				18C2A2F7788E91AB6AB569D6 /* Picture.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

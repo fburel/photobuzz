@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05f04649-318f-4bc9-9d0b-0f1443595a5d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/photobuzz/CarousselViewController.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/photobuzz/CarousselViewController.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/photobuzz/FBImageCaroussel.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/photobuzz/FBImageCaroussel.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/photobuzz/PictureRepository.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/photobuzz/PictureRepository.m" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/photobuzz/Base.lproj/Main.storyboard" afterPath="$PROJECT_DIR$/photobuzz/Base.lproj/Main.storyboard" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/photobuzzTests/photobuzzTests.m" afterPath="$PROJECT_DIR$/photobuzzTests/photobuzzTests.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/photobuzz/Picture.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/photobuzz/Picture.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/photobuzz/PictureRepository.m" afterPath="$PROJECT_DIR$/photobuzz/PictureRepository.m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/photobuzz.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/photobuzz.xcodeproj/project.pbxproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="photobuzz.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,28 +32,40 @@
       <file leaf-file-name="PictureRepository.h" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/photobuzz/PictureRepository.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="700">
+            <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="700">
               <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PictureRepository.m" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="PictureRepository.m" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/photobuzz/PictureRepository.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="858" max-vertical-offset="1815">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state vertical-scroll-proportion="1.4503677" vertical-offset="750" max-vertical-offset="1971">
+              <caret line="57" column="70" selection-start-line="57" selection-start-column="70" selection-end-line="57" selection-end-column="70" />
+              <folding>
+                <element signature="e#151#180#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Picture.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/photobuzz/Picture.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="photobuzzTests.m" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/photobuzzTests/photobuzzTests.m">
+      <file leaf-file-name="Picture.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/photobuzz/Picture.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9054545" vertical-offset="1008" max-vertical-offset="2106">
-              <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -77,8 +85,11 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/photobuzz/PictureRepository.h" />
-        <option value="$PROJECT_DIR$/photobuzz/PictureRepository.m" />
         <option value="$PROJECT_DIR$/photobuzzTests/photobuzzTests.m" />
+        <option value="$PROJECT_DIR$/photobuzz/Picture+flickrBuilder.m" />
+        <option value="$PROJECT_DIR$/photobuzz/Picture+FlickR.m" />
+        <option value="$PROJECT_DIR$/photobuzz/Picture.h" />
+        <option value="$PROJECT_DIR$/photobuzz/PictureRepository.m" />
       </list>
     </option>
   </component>
@@ -124,6 +135,10 @@
               <option name="myItemId" value="photobuzz" />
               <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Products" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.XcodeViewNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -164,6 +179,7 @@
     <property name="options.searchVisible" value="true" />
     <property name="FullScreen" value="true" />
     <property name="recentsLimit" value="5" />
+    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="photobuzz" />
   </component>
   <component name="RunManager" selected="Application.photobuzz">
     <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PASS_PARENT_ENVS="FALSE" PROJECT_NAME="photobuzz" TARGET_NAME="photobuzz" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="photobuzz" RUN_TARGET_NAME="photobuzz" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
@@ -186,6 +202,8 @@
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
       </EXTENSION>
+      <RunnerSettings RunnerId="AppRunner" />
+      <ConfigurationWrapper RunnerId="AppRunner" />
       <method />
     </configuration>
     <list size="1">
@@ -207,17 +225,18 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32942554" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14027777" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -249,6 +268,14 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/photobuzzTests/photobuzzTests.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9054545" vertical-offset="1008" max-vertical-offset="2106">
+          <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/photobuzz/PictureRepository.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="700">
@@ -257,19 +284,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/photobuzz/PictureRepository.m">
+    <entry file="file://$PROJECT_DIR$/photobuzz/Picture.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="858" max-vertical-offset="1815">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/photobuzzTests/photobuzzTests.m">
+    <entry file="file://$PROJECT_DIR$/photobuzz/Picture.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9054545" vertical-offset="1008" max-vertical-offset="2106">
-          <caret line="47" column="1" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/photobuzz/PictureRepository.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4503677" vertical-offset="750" max-vertical-offset="1971">
+          <caret line="57" column="70" selection-start-line="57" selection-start-column="70" selection-end-line="57" selection-end-column="70" />
+          <folding>
+            <element signature="e#151#180#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

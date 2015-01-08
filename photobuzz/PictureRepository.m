@@ -7,12 +7,30 @@
 //
 
 #import "PictureRepository.h"
+#import "Picture.h"
 
 #define FLICKR_API_KEY      @"edd17c0c4d413be050ffdba18c74c0e1"
 
+
+@implementation Picture (FlickRBuilder)
+
+- (id)initWithTitle:(NSString *)title farm:(id)farm server:(id)server flickrID:(id)ID secret:(id)secret{
+
+    self = [super init];
+    if(self)
+    {
+       self.title =  title;
+       self.url = [NSString stringWithFormat:@"https://farm%@.staticflickr.com/%@/%@_%@.jpg", farm,server, ID, secret];
+    }
+    return self;
+}
+@end
+
+
 @implementation PictureRepository
 
-- (NSArray *)picturesFromArea:(FlickRArea)area {
+- (NSArray *)picturesFromArea:(FlickRArea)area
+{
 
 
     NSString * url = [NSString stringWithFormat:@"https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%@&lat=%f&lon=%f&radius=%f&per_page=300&format=json&nojsoncallback=1",
@@ -28,17 +46,17 @@
 
 
     // parser le json (creation d'un tableau de Picture)
-    NSArray * photoItems = ...;
+    NSArray * photoItems = jsonAnswer[@"photos"][@"photo"];
 
-    NSMutableArray * pictures = ...;
+    NSMutableArray * pictures = [NSMutableArray new];
 
     for (NSDictionary * item in photoItems)
     {
-        Picture * p = ...;
-
-        p.title = ...;
-        p.url = ...;
-
+        Picture * p = [[Picture alloc] initWithTitle:item[@"title"]
+                                                farm:item[@"farm"]
+                                              server:item[@"server"]
+                                            flickrID:item[@"id"]
+                                              secret:item[@"secret"]];
         [pictures addObject:p];
     }
 
@@ -47,3 +65,4 @@
 }
 
 @end
+
