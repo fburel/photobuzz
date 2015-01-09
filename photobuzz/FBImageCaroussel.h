@@ -18,6 +18,8 @@
 
 @interface FBImageCaroussel : UIView
 
+@property (nonatomic, readonly) int currentPageIndex;
+
 @property (nonatomic, readwrite, weak) id<FBImageCarousselDataSource> dataSource;
 - (void)displayPageAtIndex:(int)index;
 @end

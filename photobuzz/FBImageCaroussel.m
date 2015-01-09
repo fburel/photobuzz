@@ -53,6 +53,9 @@
     // Ajuster la taille
     page.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     page.contentMode = UIViewContentModeScaleAspectFit;
+    page.autoresizingMask = UIViewAutoresizingFlexibleWidth |
+                            UIViewAutoresizingFlexibleHeight;
+    
     
     // Afficher
     [self addSubview:page];
