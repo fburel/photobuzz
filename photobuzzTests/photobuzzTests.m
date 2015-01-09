@@ -67,4 +67,5 @@
     XCTAssert([repo cachedDataForPicture:p] == data);
     
 }
+
 @end

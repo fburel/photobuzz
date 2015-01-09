@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class City;
+
 @interface CarousselViewController : UIViewController
+
+@property (strong, nonatomic) City * city;
 
 @end

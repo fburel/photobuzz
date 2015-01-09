@@ -10,6 +10,9 @@
 #import "FBImageCaroussel.h"
 #import "PictureRepository.h"
 #import "Picture.h"
+#import "City.h"
+
+#define DEFAULT_RADIUS  5
 
 @interface CarousselViewController ()
 <FBImageCarousselDataSource>
@@ -26,12 +29,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    FlickRArea moscow;
-    moscow.latitude = 36.175;
-    moscow.longitude = -115.136389;
-    moscow.radius = 10;
+    FlickRArea area;
+    area.latitude = self.city.latitude.doubleValue;
+    area.longitude = self.city.longitude.doubleValue;
+    area.radius = DEFAULT_RADIUS;
     
-    self.title = @"Moscow";
+    self.title = self.city.name;
     
     self.repository = [PictureRepository sharedInstance];
     
@@ -43,7 +46,7 @@
     dispatch_async(netQ, ^{
         
         // Code en async
-        self.pictures = [self.repository picturesFromArea:moscow];
+        self.pictures = [self.repository picturesFromArea:area];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             
