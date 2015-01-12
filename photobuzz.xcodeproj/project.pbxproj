@@ -22,6 +22,7 @@
 		0CD1C2B91A5FE25700416EED /* CityRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD1C2B81A5FE25700416EED /* CityRepository.m */; };
 		0CD1C2BE1A60317D00416EED /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CD1C2C01A60317D00416EED /* Localizable.strings */; };
 		18C2A2F7788E91AB6AB569D6 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2AE51F92BB8C66D35EA6B /* Picture.m */; };
+		18C2AAEC9E43A036DA9C3744 /* CityLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2ACF292F06344380CEEBA /* CityLocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +64,9 @@
 		0CD1C2BB1A60307800416EED /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		0CD1C2C21A60318500416EED /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0CD1C2C31A60325900416EED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		18C2A33F0FBD429198240889 /* CityLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityLocationManager.h; sourceTree = "<group>"; };
 		18C2A8B87ACCD198BAFB19A0 /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
+		18C2ACF292F06344380CEEBA /* CityLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityLocationManager.m; sourceTree = "<group>"; };
 		18C2AE51F92BB8C66D35EA6B /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,6 +130,8 @@
 				0CD1C2821A5D7DC300416EED /* Supporting Files */,
 				18C2AE51F92BB8C66D35EA6B /* Picture.m */,
 				18C2A8B87ACCD198BAFB19A0 /* Picture.h */,
+				18C2ACF292F06344380CEEBA /* CityLocationManager.m */,
+				18C2A33F0FBD429198240889 /* CityLocationManager.h */,
 			);
 			path = photobuzz;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 				0CD1C2851A5D7DC300416EED /* main.m in Sources */,
 				18C2A2F7788E91AB6AB569D6 /* Picture.m in Sources */,
 				0CD1C2B61A5FDB3C00416EED /* City.m in Sources */,
+				18C2AAEC9E43A036DA9C3744 /* CityLocationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

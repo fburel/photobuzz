@@ -16,6 +16,8 @@ typedef struct{
     double radius;
 } FlickRArea;
 
+typedef void (^FetchCompletion)(NSArray * pictures, NSError * error);
+
 @interface PictureRepository : NSObject
 
 + (id) sharedInstance;
@@ -23,9 +25,17 @@ typedef struct{
 /// Download pictures
 - (NSArray *) picturesFromArea:(FlickRArea)area;
 
+- (NSArray *) picturesFromArea:(FlickRArea)area error:(NSError **)error;
+
+- (void) picturesFromArea:(FlickRArea)area
+               completion:(FetchCompletion)block;
+
 /// Cache
 - (NSData *) cachedDataForPicture:(Picture *)picture;
 - (void) registerCacheData:(NSData *)data forPicture:(Picture *)picture;
 
+// Image Download
+
+- (void) downloadImageForPicture:(Picture *)picture completion:(ImageDowloadBlock)block;
 
 @end

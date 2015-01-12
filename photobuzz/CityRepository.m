@@ -9,6 +9,7 @@
 #import "CityRepository.h"
 #import "AppDelegate.h"
 #import "City.h"
+#import "CityLocationManager.h"
 
 @implementation CityRepository
 
@@ -29,14 +30,13 @@
 
 - (City *)newCity
 {
-    City * city = [NSEntityDescription insertNewObjectForEntityForName:@"City" inManagedObjectContext:self.context];
+    City * city = [NSEntityDescription insertNewObjectForEntityForName:@"City"
+                                                inManagedObjectContext:self.context];
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(4 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        city.name = @"Moscow";
-        city.longitude = @37.623086;
-        city.latitude = @55.7525;
-
-    });
+    
+    CityLocationManager * manager;
+    manager = [CityLocationManager sharedInstance];
+    [manager locate:city];
     
     
     return city;

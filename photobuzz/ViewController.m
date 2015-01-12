@@ -89,7 +89,7 @@
 
 - (IBAction)add:(id)sender {
     
-    // TODO: Utiliser le repo pour ajouter un element et reactualiser self.cities
+    
     City * city = [self.repository newCity];
     
     [city addObserver:self

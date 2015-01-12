@@ -68,4 +68,34 @@
     
 }
 
+
+- (void) test_ptr_error
+{
+
+    NSError * error = nil;
+    
+    double result = divide(3, 0, &error);
+
+    XCTAssert(result == 0);
+    
+    XCTAssert(error != nil && error.code == 1);
+    
+}
+
+double divide(double a , double b, NSError **error)
+{
+    if(b == 0)
+    {
+    
+        *error  = [NSError errorWithDomain:@"toto"
+                                      code:1
+                                  userInfo:nil];
+        return 0;
+    }
+    else {
+        *error = nil;
+        return a / b;
+    }
+}
+
 @end

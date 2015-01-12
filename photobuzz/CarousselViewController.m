@@ -15,7 +15,7 @@
 #define DEFAULT_RADIUS  5
 
 @interface CarousselViewController ()
-<FBImageCarousselDataSource>
+<FBImageCarousselDataSource, UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet FBImageCaroussel *caroussel;
 
@@ -28,6 +28,7 @@
 @implementation CarousselViewController
 
 - (void)viewDidLoad {
+
     [super viewDidLoad];
 
     FlickRArea area;
@@ -36,34 +37,37 @@
     area.radius = DEFAULT_RADIUS;
     
     self.title = self.city.name;
-    
     self.repository = [PictureRepository sharedInstance];
-    
     self.caroussel.hidden = YES;
-    
 
-    dispatch_queue_t netQ = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
-    
-    dispatch_async(netQ, ^{
-        
-        // Code en async
-        self.pictures = [self.repository picturesFromArea:area];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-            // Callback
-            self.caroussel.hidden = NO;
-            if(self.pictures.count > 0)
-            {
-                [self.caroussel displayPageAtIndex:0];
-            }
-            
-        });
-        
-    });
+
+    [self.repository picturesFromArea:area
+                           completion:^(NSArray *pictures, NSError *error)
+                           {
+                               if(error)
+                               {
+                                   // error
+                                   UIAlertView * alert = [[UIAlertView alloc] initWithTitle:error.localizedDescription
+                                                                                    message:error.localizedFailureReason
+                                                                                   delegate:self
+                                                                          cancelButtonTitle:@"OK"
+                                                                          otherButtonTitles:nil];
+                                   [alert show];
+
+                               }
+                               else
+                               {
+                                   self.pictures = pictures;
+                                   self.caroussel.hidden = NO;
+                                   [self.caroussel displayPageAtIndex:0];
+                               }
+
+
+
+                           }];
     
     self.caroussel.dataSource = self;
-    
+
 }
 
 - (int)numberOfPages
@@ -99,6 +103,8 @@
         dispatch_async(netQ, ^
         {
             
+            NSLog(@"download pic %i", pageIdx);
+            
             NSData * imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:picture.url]];
             
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -133,6 +139,9 @@
     [self presentViewController:avc animated:YES completion:nil];
 }
 
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    [self.navigationController popViewControllerAnimated:YES];
+}
 @end
 
 
