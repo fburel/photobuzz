@@ -19,6 +19,8 @@
 		0CD1C2B01A5D830500416EED /* CarousselViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD1C2AF1A5D830500416EED /* CarousselViewController.m */; };
 		0CD1C2B31A5D868F00416EED /* PictureRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD1C2B21A5D868F00416EED /* PictureRepository.m */; };
 		0CD1C2B61A5FDB3C00416EED /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD1C2B51A5FDB3C00416EED /* City.m */; };
+		0CD1C2B91A5FE25700416EED /* CityRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD1C2B81A5FE25700416EED /* CityRepository.m */; };
+		0CD1C2BE1A60317D00416EED /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0CD1C2C01A60317D00416EED /* Localizable.strings */; };
 		18C2A2F7788E91AB6AB569D6 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C2AE51F92BB8C66D35EA6B /* Picture.m */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,12 @@
 		0CD1C2B21A5D868F00416EED /* PictureRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureRepository.m; sourceTree = "<group>"; };
 		0CD1C2B41A5FDB3C00416EED /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
 		0CD1C2B51A5FDB3C00416EED /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
+		0CD1C2B71A5FE25700416EED /* CityRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityRepository.h; sourceTree = "<group>"; };
+		0CD1C2B81A5FE25700416EED /* CityRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityRepository.m; sourceTree = "<group>"; };
+		0CD1C2BA1A60307800416EED /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		0CD1C2BB1A60307800416EED /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		0CD1C2C21A60318500416EED /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		0CD1C2C31A60325900416EED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		18C2A8B87ACCD198BAFB19A0 /* Picture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
 		18C2AE51F92BB8C66D35EA6B /* Picture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +115,8 @@
 				0CD1C28F1A5D7DC300416EED /* Main.storyboard */,
 				0CD1C2AE1A5D830500416EED /* CarousselViewController.h */,
 				0CD1C2AF1A5D830500416EED /* CarousselViewController.m */,
+				0CD1C2B71A5FE25700416EED /* CityRepository.h */,
+				0CD1C2B81A5FE25700416EED /* CityRepository.m */,
 				0CD1C2B11A5D868F00416EED /* PictureRepository.h */,
 				0CD1C2B21A5D868F00416EED /* PictureRepository.m */,
 				0CD1C2921A5D7DC300416EED /* Images.xcassets */,
@@ -126,6 +136,7 @@
 			children = (
 				0CD1C2831A5D7DC300416EED /* Info.plist */,
 				0CD1C2841A5D7DC300416EED /* main.m */,
+				0CD1C2C01A60317D00416EED /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -196,6 +207,7 @@
 				TargetAttributes = {
 					0CD1C27E1A5D7DC300416EED = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = Z9AH4KN35R;
 					};
 					0CD1C29A1A5D7DC300416EED = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -210,6 +222,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 0CD1C2761A5D7DC300416EED;
 			productRefGroup = 0CD1C2801A5D7DC300416EED /* Products */;
@@ -228,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0CD1C2911A5D7DC300416EED /* Main.storyboard in Resources */,
+				0CD1C2BE1A60317D00416EED /* Localizable.strings in Resources */,
 				0CD1C2961A5D7DC300416EED /* LaunchScreen.xib in Resources */,
 				0CD1C2931A5D7DC300416EED /* Images.xcassets in Resources */,
 			);
@@ -249,6 +263,7 @@
 			files = (
 				0CD1C2AD1A5D7E3F00416EED /* FBImageCaroussel.m in Sources */,
 				0CD1C2881A5D7DC300416EED /* AppDelegate.m in Sources */,
+				0CD1C2B91A5FE25700416EED /* CityRepository.m in Sources */,
 				0CD1C28B1A5D7DC300416EED /* photobuzz.xcdatamodeld in Sources */,
 				0CD1C28E1A5D7DC300416EED /* ViewController.m in Sources */,
 				0CD1C2B31A5D868F00416EED /* PictureRepository.m in Sources */,
@@ -282,6 +297,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				0CD1C2901A5D7DC300416EED /* Base */,
+				0CD1C2BA1A60307800416EED /* fr */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -290,8 +306,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				0CD1C2951A5D7DC300416EED /* Base */,
+				0CD1C2BB1A60307800416EED /* fr */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		0CD1C2C01A60317D00416EED /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0CD1C2C21A60318500416EED /* fr */,
+				0CD1C2C31A60325900416EED /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

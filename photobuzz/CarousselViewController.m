@@ -22,6 +22,7 @@
 @property (strong, nonatomic) NSArray * pictures;
 
 @property (strong, nonatomic) PictureRepository * repository;
+
 @end
 
 @implementation CarousselViewController

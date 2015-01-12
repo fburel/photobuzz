@@ -1,0 +1,12 @@
+
+/* Class = "IBUILabel"; text = "Patientez svp... "; ObjectID = "0Fo-W3-jjB"; */
+"0Fo-W3-jjB.text" = "Patientez svp... ";
+
+/* Class = "IBUILabel"; text = "Title"; ObjectID = "Ifm-iO-3RY"; */
+"Ifm-iO-3RY.text" = "Title";
+
+/* Class = "IBUINavigationItem"; title = "Photo Buzz"; ObjectID = "TPS-Lz-OFH"; */
+"TPS-Lz-OFH.title" = "Photo Buzz";
+
+/* Class = "IBUILabel"; text = "Patientez svp... localisation en cours"; ObjectID = "uAl-2K-1EL"; */
+"uAl-2K-1EL.text" = "Patientez svp... localisation en cours";
