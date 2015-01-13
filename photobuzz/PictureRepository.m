@@ -168,5 +168,38 @@
 {
     return self.cache[picture.url];
 }
+
+- (void)downloadImageForPicture:(Picture *)picture completion:(ImageDowloadBlock)block
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        
+        NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:picture.url]];
+        
+        dispatch_async(dispatch_get_main_queue(), ^
+        {
+            NSError * error = nil;
+            if(data)
+            {
+                [self registerCacheData:data forPicture:picture];
+            }
+            else
+            {
+                error = [NSError errorWithDomain:ERROR_DOMAIN
+                                            code:23 userInfo:@
+                         {
+                             NSLocalizedDescriptionKey : NSLocalizedString(@"Erreur", nil)
+                         }];
+            }
+            
+            if(block)
+            {
+                block(data, error);
+            }
+            
+        });
+        
+    });
+
+}
 @end
 

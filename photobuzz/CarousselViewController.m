@@ -97,24 +97,17 @@
         UIImage * image = [UIImage imageNamed:@"loading"];
         imageView.image = image;
         
-        // Telechargement et sauvefgarde en cache en async
-        dispatch_queue_t netQ = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
-        
-        dispatch_async(netQ, ^
+        [self.repository downloadImageForPicture:picture
+                                      completion:^(NSData *data, NSError *error)
         {
-            
-            NSLog(@"download pic %i", pageIdx);
-            
-            NSData * imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:picture.url]];
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                
-                [self.repository registerCacheData:imageData forPicture:picture];
-                imageView.image = [UIImage imageWithData:imageData];
-                
-            });
-        });
-
+            if(error)
+            {
+                // affichage d'une image "cassée" ou alert, ou autre...
+            }
+            else{
+                imageView.image = [UIImage imageWithData:data];
+            }
+        }];
     }
     return imageView;
 }

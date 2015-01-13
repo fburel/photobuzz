@@ -18,6 +18,8 @@ typedef struct{
 
 typedef void (^FetchCompletion)(NSArray * pictures, NSError * error);
 
+typedef void (^ImageDowloadBlock)(NSData * data, NSError * error);
+
 @interface PictureRepository : NSObject
 
 + (id) sharedInstance;
