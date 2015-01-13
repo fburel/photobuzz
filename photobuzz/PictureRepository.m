@@ -8,6 +8,7 @@
 
 #import "PictureRepository.h"
 #import "Picture.h"
+#import "ImageDownloader.h"
 
 #define FLICKR_API_KEY      @"edd17c0c4d413be050ffdba18c74c0e1"
 
@@ -16,6 +17,8 @@
 @interface PictureRepository ()
 
 @property (strong, nonatomic) NSMutableDictionary * cache;
+
+@property (strong, nonatomic) NSOperationQueue * operationQueue;
 
 @end
 
@@ -53,6 +56,7 @@
     self = [super init];
     if (self) {
         self.cache = [NSMutableDictionary new];
+        self.operationQueue = [NSOperationQueue new];
     }
     return self;
 }
@@ -171,34 +175,44 @@
 
 - (void)downloadImageForPicture:(Picture *)picture completion:(ImageDowloadBlock)block
 {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-        
-        NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:picture.url]];
-        
-        dispatch_async(dispatch_get_main_queue(), ^
+    // Telechargement de l'image
+    ImageDownloader * downloadImage = [[ImageDownloader alloc] initWithPicture:picture];
+    downloadImage.queuePriority = NSOperationQueuePriorityHigh;
+
+    // Enregistrement en cache
+    NSOperation * cacheImageData = [NSBlockOperation blockOperationWithBlock:^{
+
+        if(downloadImage.imageData)
         {
-            NSError * error = nil;
-            if(data)
-            {
-                [self registerCacheData:data forPicture:picture];
-            }
-            else
-            {
-                error = [NSError errorWithDomain:ERROR_DOMAIN
-                                            code:23 userInfo:@
-                         {
-                             NSLocalizedDescriptionKey : NSLocalizedString(@"Erreur", nil)
-                         }];
-            }
-            
-            if(block)
-            {
-                block(data, error);
-            }
-            
-        });
-        
-    });
+            [self registerCacheData:downloadImage.imageData forPicture:picture];
+        }
+    }];
+    [cacheImageData addDependency:downloadImage];
+
+    // execution du block de completion
+    NSOperation * completionOperation = [NSBlockOperation blockOperationWithBlock:^{
+
+        NSData * data = downloadImage.imageData;
+        NSError * error = nil;
+
+        if(!data)
+        {
+            error = [NSError errorWithDomain:ERROR_DOMAIN
+                                        code:42
+                                    userInfo:nil];
+        }
+        if(block)
+        {
+            block(data, error);
+        }
+    }];
+    [completionOperation addDependency:downloadImage];
+
+
+    [self.operationQueue addOperation:downloadImage];
+    [self.operationQueue addOperation:cacheImageData];
+    [[NSOperationQueue mainQueue] addOperation:completionOperation];
+
 
 }
 @end

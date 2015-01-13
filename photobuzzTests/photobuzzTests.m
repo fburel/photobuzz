@@ -38,7 +38,7 @@
 
     NSArray * dl = [repo picturesFromArea:area];
 
-    XCTAssert(dl.count == 300);
+
 
     for(id element in dl)
     {

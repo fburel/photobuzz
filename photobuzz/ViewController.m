@@ -69,6 +69,7 @@
         UILabel * label = (UILabel *) [cell viewWithTag:666];
         
         label.text = NSLocalizedString(@"Waiting please! We'll find you soon...", nil);
+
     }
     
     return cell;
@@ -83,6 +84,7 @@
     self.cities = [self.repository allCity];
     
     [self.tableView reloadData];
+
 }
 
 #pragma mark - User Interaction
