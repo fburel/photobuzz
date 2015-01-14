@@ -63,6 +63,7 @@
 
 - (NSArray *)picturesFromArea:(FlickRArea)area
 {
+   
     return [self picturesFromArea:area error:nil];
 }
 
@@ -79,7 +80,7 @@
     NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url]];
     
     
-    if(!data)
+    if(!data && error)
     {
         *error = [NSError errorWithDomain:ERROR_DOMAIN
                                      code:1

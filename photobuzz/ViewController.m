@@ -26,7 +26,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     self.repository = [[CityRepository alloc]init];
+    
+   // [self.repository populate];
     
     self.cities = [self.repository allCity];
     

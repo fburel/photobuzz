@@ -98,4 +98,8 @@ double divide(double a , double b, NSError **error)
     }
 }
 
+- (void) testIOS8
+{
+    XCTAssert(NSClassFromString(@"NSAsynchronousFetchResult") != nil);
+}
 @end

@@ -27,10 +27,17 @@
 
 @implementation CarousselViewController
 
+- (void)didReceiveMemoryWarning
+{
+    NSLog(@"memory warning");
+}
+
 - (void)viewDidLoad {
 
     [super viewDidLoad];
 
+        
+    
     FlickRArea area;
     area.latitude = self.city.latitude.doubleValue;
     area.longitude = self.city.longitude.doubleValue;
@@ -38,6 +45,8 @@
     
     self.title = self.city.name;
     self.repository = [PictureRepository sharedInstance];
+    
+    
     self.caroussel.hidden = YES;
 
 
@@ -65,6 +74,9 @@
 
 
                            }];
+    
+    
+    //self.pictures = [self.repository picturesFromArea:area];
     
     self.caroussel.dataSource = self;
 

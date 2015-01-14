@@ -33,9 +33,14 @@
 - (void)locate:(City *)city {
 
     [self.cities addObject:city];
+    
+    
 
-    [self.locationManager requestWhenInUseAuthorization];
-
+    
+    if([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)])
+    {
+        [self.locationManager requestWhenInUseAuthorization];
+    }
     [self.locationManager startUpdatingLocation];
 
 }

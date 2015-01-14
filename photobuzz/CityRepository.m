@@ -22,9 +22,12 @@
 
 - (void)populate
 {
-    for(int i = 0; i < 3; i++)
+    for(int i = 0; i < 300000; i++)
     {
-        [self newCity];
+        City * c = [self newCity];
+        NSArray * names = @[@"Moscow", @"Paris", @"Nantes", @"Bordeaux", @"Gagny", @"Budapest", @"New York", @"Yangon", @"Beijin", @"Los Angeles", @"Amsterdam", @"Praha", @"Ankara", @"Bamako"];
+        
+        c.name = names[i%names.count];
     }
 }
 
@@ -33,11 +36,11 @@
     City * city = [NSEntityDescription insertNewObjectForEntityForName:@"City"
                                                 inManagedObjectContext:self.context];
     
-    
+    /*
     CityLocationManager * manager;
     manager = [CityLocationManager sharedInstance];
     [manager locate:city];
-    
+    */
     
     return city;
 }
@@ -45,6 +48,7 @@
 - (NSArray *)allCity
 {
     NSFetchRequest * request = [[NSFetchRequest alloc]initWithEntityName:@"City"];
+    request.fetchBatchSize = 200;
     return [[self context] executeFetchRequest:request
                                   error:nil];
 }
